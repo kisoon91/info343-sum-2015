@@ -8,3 +8,9 @@
  */
 
 //use jQuery to register a function that is called when the document is ready for manipulation
+$(function(){
+	var currentUser = Parse.User.current();
+	if (!currentUser){
+		window.location = 'signin.html';
+	}
+}};
